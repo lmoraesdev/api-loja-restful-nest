@@ -9,6 +9,6 @@ export class CriaUsuarioDTO {
   @EmailEhUnico({ message: 'Já existe um usuário com este e-mail' })
   email: string;
 
-  @MinLength(6, { message: 'A senha precisa ter pelo menos 6 caracteres' })
+  @MinLength(10, { message: 'A senha precisa ter pelo menos 10 caracteres' })
   senha: string;
 }
