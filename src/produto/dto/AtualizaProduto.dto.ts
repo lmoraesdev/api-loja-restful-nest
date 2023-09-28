@@ -13,9 +13,6 @@ import {
 import { CaracteristicaProdutoDTO, ImagemProdutoDTO } from './CriaProduto.dto';
 
 export class AtualizaProdutoDTO {
-  @IsUUID(undefined, { message: 'ID de usuário inválido' })
-  usuarioId: string;
-
   @IsString()
   @IsNotEmpty({ message: 'Nome do produto não pode ser vazio' })
   @IsOptional()
