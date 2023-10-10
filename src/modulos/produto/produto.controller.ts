@@ -6,11 +6,13 @@ import {
   Param,
   Post,
   Put,
+  UseInterceptors,
 } from '@nestjs/common';
 
 import { AtualizaProdutoDTO } from './dto/AtualizaProduto.dto';
 import { CriaProdutoDTO } from './dto/CriaProduto.dto';
 import { ProdutoService } from './produto.service';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @Controller('produtos')
 export class ProdutoController {
@@ -34,6 +36,7 @@ export class ProdutoController {
   }
 
   @Put('/:id')
+  @UseInterceptors(CacheInterceptor)
   async atualiza(
     @Param('id') id: string,
     @Body() dadosProduto: AtualizaProdutoDTO,
