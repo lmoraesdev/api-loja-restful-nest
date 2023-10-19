@@ -8,6 +8,7 @@ export class HashearSenhaPipe implements PipeTransform {
   async transform(senha: string) {
     const sal = this.configService.get<string>('SAL_SENHA');
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const senhaHasheada = await bcrypt.hash(senha, sal!);
     return senhaHasheada;
   }

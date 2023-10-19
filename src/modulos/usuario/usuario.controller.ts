@@ -19,6 +19,7 @@ export class UsuarioController {
 
   @Post()
   async criaUsuario(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     @Body() { senha, ...dadosDoUsuario }: CriaUsuarioDTO,
     @Body('Senha', HashearSenhaPipe) senhaHasheada: string,
   ) {
