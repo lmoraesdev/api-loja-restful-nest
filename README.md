@@ -1,73 +1,96 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+<h1 align=center>
+	<b>API Loja RESTful com NestJS</b>
+</h1>
+
+<h2 align=center>
+	 <i>Projeto Pessoal</i>
+</h2>
+
+<p align=center>
+	Este projeto é uma API RESTful para gerenciar uma loja virtual, desenvolvida utilizando o framework NestJS. A API suporta operações CRUD completas para produtos, categorias e usuários, além de autenticação e autorização.
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<h2>
+Descrição
+</h2>
 
-## Description
+A `api-loja-restful-nest` é uma aplicação backend desenvolvida com NestJS, um framework progressivo para a construção de aplicações Node.js escaláveis e eficientes. Esta API permite gerenciar uma loja virtual, oferecendo endpoints para criar, ler, atualizar e deletar produtos, categorias e usuários. Além disso, inclui funcionalidades de autenticação e autorização para proteger os recursos da aplicação.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Installation
+<h2>
+Funcionalidades
+</h2>
 
-```bash
-$ npm install
-```
+- **Gerenciamento de Produtos**: CRUD completo para produtos, incluindo nome, descrição, preço e categoria.
+- **Gerenciamento de Categorias**: CRUD completo para categorias de produtos.
+- **Gerenciamento de Usuários**: CRUD completo para usuários, incluindo cadastro, login e perfis.
+- **Autenticação e Autorização**: Implementação de JWT (JSON Web Tokens) para autenticar e autorizar usuários.
+- **Validação de Dados**: Validação robusta de dados de entrada utilizando a biblioteca class-validator.
+- **Documentação de API**: Documentação automática da API com Swagger.
 
-## Running the app
+---
 
-```bash
-# development
-$ npm run start
+<h2>
+Tecnologias Utilizadas
+</h2>
 
-# watch mode
-$ npm run start:dev
+- **NestJS**: Framework para a construção de aplicações Node.js eficientes e escaláveis.
+- **TypeScript**: Linguagem de programação utilizada para desenvolvimento do projeto.
+- **TypeORM**: ORM (Object-Relational Mapper) para interagir com o banco de dados.
+- **PostgreSQL**: Banco de dados relacional utilizado para armazenar os dados da aplicação.
+- **JWT**: Implementação de autenticação segura com JSON Web Tokens.
+- **Swagger**: Ferramenta para documentação automática da API.
 
-# production mode
-$ npm run start:prod
-```
+---
 
-## Test
+<h2>
+Instalação
+</h2>
 
-```bash
-# unit tests
-$ npm run test
+### Pré-requisitos
 
-# e2e tests
-$ npm run test:e2e
+- Node.js
+- npm ou yarn
+- PostgreSQL
 
-# test coverage
-$ npm run test:cov
-```
+### Passo a Passo
 
-## Support
+1. Clone o repositório:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+   ```sh
+   git clone https://github.com/lmoraesdev/api-loja-restful-nest.git
+   cd api-loja-restful-nest
+   ```
 
-## Stay in touch
+2. Instale as dependências:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+   ```sh
+   npm install
+   ```
 
-## License
+3. Configure as variáveis de ambiente:
 
-Nest is [MIT licensed](LICENSE).
+   Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis:
+
+   ```sh
+   DATABASE_HOST=localhost
+   DATABASE_PORT=5432
+   DATABASE_USER=seu_usuario
+   DATABASE_PASSWORD=sua_senha
+   DATABASE_NAME=nome_do_banco
+   JWT_SECRET=sua_chave_secreta
+   ```
+4. Execute as migrações do banco de dados:
+   
+   ```sh
+   npm run typeorm migratuin:run
+   ```
+   
+5. incie a aplicação:
+
+   ```sh
+   npm run start
+   ```
