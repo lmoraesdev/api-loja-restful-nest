@@ -94,3 +94,28 @@ Instalação
    ```sh
    npm run start
    ```
+
+---
+
+<h2>
+Uso
+</h2>
+
+## Endpoints Principais
+
+- **Produtos**
+  - `GET /products`: Lista todos os produtos
+  - `POST /products`: Cria um novo produto
+  - `GET /products/:id`: Retorna um produto específico
+  - `PUT /products/:id`: Atualiza um produto específico
+  - `DELETE /products/:id`: Deleta um produto específico
+- **Categoria**
+  - `GET /categories`: Lista todas as categorias
+  - `POST /categories`: Cria uma nova categoria
+  - `GET /categories/:id`: Retorna uma categoria específica
+  - `PUT /categories/:id`: Atualiza uma categoria específica-
+  - `DELETE /categories/:id`: Deleta uma categoria específica
+- **Usuários**
+  - `POST /auth/signup`: Registra um novo usuário
+  - `POST /auth/login`: Autentica um usuário e retorna um token JWT
+ 
